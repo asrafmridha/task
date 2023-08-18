@@ -15,15 +15,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('pages.dashboard.i');
+    return view('pages.dashboard.index');
 });
 
-Route::get('list-todo',[TodoController::class, 'TodoList']);
+Route::get('list-todo', [TodoController::class, 'TodoList']);
 
 
 
-Route::post('create-todo',[TodoController::class, 'TodoCreate']);
-Route::post('delete-todo',[TodoController::class, 'TodoDelete']);
-Route::post('todo-by-id',[TodoController::class, 'TodoById']);
-Route::post('update-todo',[TodoController::class, 'TodoUpdate']);
-
+Route::post('create-todo', [TodoController::class, 'TodoCreate']);
+Route::post('delete-todo', [TodoController::class, 'TodoDelete']);
+Route::post('todo-by-id', [TodoController::class, 'TodoById']);
+Route::post('update-todo', [TodoController::class, 'TodoUpdate']);
